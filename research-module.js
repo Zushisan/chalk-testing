@@ -1,7 +1,20 @@
+var list = [];
+
+function sortDataList(list) {
+  list.sort(function(a,b){
+      return a - b
+  })
+}
 
 module.exports = {
-  aKey: "A key value.",
-  myFunction: function() {
-    console.log("I am a function in module.exports");
+  storeNumber: function(num) {
+    list.push(num);
+    console.log("I store " + num + " in the list.");
+
+  },
+
+  printDataList: function() {
+    sortDataList(list);
+    console.log(list);
   }
 };
